@@ -3,6 +3,8 @@ package com.example.lamoss.lab8exercise;
 import org.junit.Before;
 import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
 public class CustomListTest {
@@ -18,6 +20,13 @@ public class CustomListTest {
         int listSize = list.getCount();
         list.addCity(new City("Edmonton", "AB"));
         assertEquals(list.getCount(), listSize + 1);
+    }
+
+    @Test
+    public void hasCityTest() {
+        City city = new City("Edmonton", "AB")
+        list.addCity(city);
+        assertTrue(list.hasCity(city));
     }
 }
 
